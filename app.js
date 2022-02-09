@@ -21,22 +21,28 @@
 
 // console.log(generatePage('Jane', 'janehub'));
 
-const fs = require('fs');
-const generatePage = require('./src/page-template.js');
 
-const profileDataArgs = process.argv.slice(2);
+const inquirer = require('inquirer');
 
-console.log(profileDataArgs);
+inquirer 
+  .prompt([
+      {
+          type: 'input',
+          name: 'name',
+          message: 'What is your name?'
+      }
+  ])
+   .then(answers => console.log(answers));
 
-const [name, github] = profileDataArgs;
+   
+// const fs = require('fs');
+// const generatePage = require('./src/page-template.js');
 
-console.log(name, github);
+// const pageHTML = generatePage(name, github);
 
-const pageHTML = generatePage(name, github);
+// // three arguments: create html, data being written, error catcher
+// fs.writeFile('./index.html', pageHTML, err => {
+//     if (err) throw new Error(err);
 
-// three arguments: create html, data being written, error catcher
-fs.writeFile('./index.html', pageHTML, err => {
-    if (err) throw new Error(err);
-
-    console.log('Portfolio complete! Check out index.html to see the output!');
-}); 
+//     console.log('Portfolio complete! Check out index.html to see the output!');
+// }); 
