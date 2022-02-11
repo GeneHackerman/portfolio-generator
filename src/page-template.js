@@ -164,8 +164,6 @@ const generateProjects = projectsArr => {
 // }; // error here but the return above still shows as running
 
 // export function to generate entire page
-
-
 module.exports = templateData => {
 
     // '...' is spread operator. this clones data from array and prints the rest
