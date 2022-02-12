@@ -1,4 +1,5 @@
-# portfolio-generator
+# Project Title
+Portfolio-Generator
 
 # Description
 A portfolio generating application using node.js to create a full html page with css styling using NPM dependencies.
