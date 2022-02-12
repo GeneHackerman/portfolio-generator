@@ -23,7 +23,8 @@ const inquirer = require("inquirer");
 
 // console.log(generatePage('Jane', 'janehub'));
 
-const fs = require('fs');
+// const fs = require('fs');
+const {writeFile, copyFile} = require('./utils/generate-site.js');
 const generatePage = require('./src/page-template.js');
 
 
@@ -207,7 +208,7 @@ promptUser()
     .catch(err => {
         console.log(err);
     });
-    //continue off 9.5.4
+    
 
 
 
